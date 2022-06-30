@@ -1,0 +1,70 @@
+// Foundation
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+
+// LOWER-MAIN-MV
+.l-main {
+  &__mv {
+    margin-top: 102px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 320px;
+    @include mq-down(md)  {
+      height: 200px;
+      margin-top: 74px;
+    }
+
+    &__bg {
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      .img-box {
+        height: 100%;
+      }
+    }
+    &__wrap {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      height: 100%;
+
+      .ttl {
+        color: #fff;
+        margin-bottom: 16px;
+        @include mq-down(md)  {
+          margin-bottom: 10px;
+        }
+        .ja {
+          font-size: 3.2rem;
+          line-height: 1.6;
+          @include mq-down(md)  {
+            font-size: 2.8rem;
+            line-height: 1.4;
+          }
+        }
+        .eng {
+          font-size: 1.6rem;
+          position: relative;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 100vw;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            top: calc(50% - 1px);
+            right: -10px;
+            transform: scaleX(1) translate(100%,-50%);
+          }
+        }
+      }
+    }
+  }
+}

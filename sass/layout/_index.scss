@@ -1,0 +1,852 @@
+// Foundation
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+
+/* ============================================
+// INDEX
+// ==========================================*/
+
+.page-loaded.front-page {
+  .main {
+    .mv__wrap {
+      .catch {
+        &__main {
+          animation: fadein-b-40 600ms $bezier-easeOutSine 0ms forwards;
+        }
+        &__sub {
+          animation: fadein-b-40 600ms $bezier-easeOutSine 400ms forwards;
+        }
+      }
+    }
+    .mv-swiper {
+      .swiper-wrapper {
+        .swiper-slide-active img,
+        .swiper-slide-duplicate-active img,
+        .swiper-slide-prev img{
+          animation: imgZoomUp 10s linear 0s 1 normal both;
+          @media all and (-ms-high-contrast: none) {
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+}
+.front-page {
+  .main {
+    // メインビジュアル
+    .mv {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 597px;
+      margin-top: 102px;
+      @include mq-down(md)  {
+        height: 350px;
+        margin-top: 74px;
+      }
+
+      &__wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        .catch {
+          margin-left: 40px;
+          margin-bottom: 48px;
+          @include mq-down(md)  {
+            margin-left: 20px;
+            margin-bottom: 24px;
+          }
+          &__main {
+            opacity: 0;
+            .ttl {
+              @include mq-down(md)  {
+                transform: scale(0.5);
+                transform-origin: bottom left;
+              }
+              .img {
+                margin-top: 26px;
+                &:first-child {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+          &__sub {
+            margin-top: 36px;
+            opacity: 0;
+            @include mq-down(md)  {
+              margin-top: 18px;
+            }
+            .txt {
+              color: #fff;
+              font-size: 1.8rem;
+              font-weight: bold;
+              line-height: 1.9;
+              @include mq-down(md)  {
+                font-size: 1.6rem;
+                line-height: 1.6;
+              }
+            }
+          }
+        }
+      }
+      .mv-swiper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($primary-color,20%);
+        }
+        .swiper-wrapper {
+          .swiper-slide {
+            .img-box {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .mv-swiper-pagination {
+        margin-top: 24px;
+        @include mq-down(md)  {
+          margin-top: 4px;
+        }
+        .swiper-pagination-bullet {
+          width: 36px;
+          height: 4px;
+          border-radius: 0%;
+          background-color: #333333;
+          opacity: 1;
+          margin-right: 14px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &-active {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+
+    // サブビジュアル
+    .subvisual {
+      margin-top: -72px;
+      @include mq-down(md)  {
+        margin-top: -80px;
+        position: relative;
+        z-index: -1;
+      }
+
+      &__inner {
+      }
+      .txt-holder {
+        .img {
+          text-align: center;
+          img {
+            width: 200px;
+          }
+        }
+        .lead {
+          text-align: center;
+          font-size: 2.8rem;
+          color: $primary-color;
+          line-height: 1.6;
+          margin-top: 24px;
+        }
+        .desc {
+          margin-top: 16px;
+        }
+      }
+      .img-holder {
+        .img {
+          height: 400px;
+          @include mq-down(md)  {
+            height: 200px;
+          }
+
+          img {
+            object-position: bottom;
+          }
+        }
+      }
+    }
+
+    // SECTIONS
+    .main__sections {
+    }
+
+    // 新着求人
+    .sec__newJobs {
+      @include mq-down(md)  {
+        margin-top: 60px;
+      }
+
+      .newJobs {
+        &__inner {
+          max-width: 770px;
+          margin-right: 0;
+          margin-left: auto;
+          display: flex;
+          justify-content: flex-start;
+          box-shadow: 0px 0px 30px -16px #777777;
+          background-color: #fff;
+
+          @media screen and (min-width:768px) and (max-width:1024px) {
+            max-width: 670px;
+            margin-right: -2px;
+          }
+          @include mq-down(md)  {
+            display: block;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            width: 92%;
+            margin: 0 auto;
+          }
+        }
+        &__head {
+          flex: 0 0 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          background-color: #fff;
+          position: relative;
+          z-index: 2;
+          margin-top: -72px;
+
+          @media screen and (min-width:768px) and (max-width:1024px) {
+            flex: 0 0 22%;
+          }
+          @include mq-down(md)  {
+            margin-top: 0;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-left: 20px;
+          }
+
+          .icon-btn {
+            height: 36px;
+            width: 100px;
+            margin-top: 8px;
+            @include mq-down(md)  {
+              margin-right: 20px;
+            }
+
+            .link {
+              padding: 0;
+            }
+          }
+        }
+        &__body {
+          flex: 0 0 80%;
+          display: flex;
+          justify-content: flex-start;
+          border-radius: 10px 10px 0 10px;
+          background-color: #fff;
+          margin-top: -72px;
+
+          @media screen and (min-width:768px) and (max-width:1024px) {
+            flex: 0 0 78%;
+          }
+          @include mq-down(md) {
+            margin-top: 0;
+          }
+        }
+        &__container {
+          width: 100%;
+          @include mq-up(md) {
+            max-height: 140px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: #fff;
+          }
+        }
+        &__wrap {
+          @include mq-down(md) {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+        &__list {
+          flex: 0 0 89%;
+          @include mq-down(md) {
+            flex: 0 0 88%;
+          }
+          &__item {
+            a {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              padding: 30px 20px 30px 0;
+
+              @include mq-up(md) {
+                &:hover {
+                  opacity: 1;
+
+                  .img-holder {
+                    img {
+                      transform: scale(1.075);
+                    }
+                  }
+                  .lead {
+                    color: $primary-color;
+                  }
+                }
+              }
+              @media screen and (min-width:768px) and (max-width:1024px) {
+                padding-right: 12px;
+              }
+              @include mq-down(md) {
+                padding: 24px 20px;
+              }
+            }
+          }
+        }
+        &__button__wrap {
+          @include mq-up(md) {
+            flex: 0 0 11%;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          @include mq-down(md) {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+        &__swiper-button {
+          @include mq-up(md) {
+            flex: 0 0 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          @include mq-down(md) {
+            background-color: #fff;
+            width: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &.-prev {
+            padding-top: 12px;
+            @include mq-down(md)  {
+              padding-top: 0;
+              transform: rotate(-90deg);
+            }
+
+            @media all and (-ms-high-contrast: none) {
+              padding-top: 0;
+            }
+          }
+          &.-next {
+            padding-top: 12px;
+            transform: scale(1,-1);
+            @include mq-down(md)  {
+              padding-top: 0;
+              transform: rotate(90deg);
+              margin-right: 8px;
+              margin-left: -8px;
+            }
+
+            @media all and (-ms-high-contrast: none) {
+              padding-top: 0;
+              margin-top: -12px;
+            }
+          }
+          img {
+            width: 30px;
+          }
+        }
+      }
+      .img-holder {
+        @include keepAspect(69%);
+        overflow: hidden;
+        margin-right: 5%;
+        @include mq-up(md) {
+          flex: 0 0 17%;
+        }
+        @include mq-down(md) {
+          flex: 0 0 80px;
+          margin-right: 12px;
+        }
+        img {
+          transition: transform 0.4s;
+        }
+      }
+      .txt-holder {
+        flex: 1 1 auto;
+        margin-top: -8px;
+        @include mq-down(md)  {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .date {
+          font-family: $eng;
+          color: $primary-color;
+          margin-right: 20px;
+          @include mq-down(md)  {
+            margin-right: 14px;
+          }
+        }
+        .place {
+          color: #bbbbbb;
+          position: relative;
+          &:before {
+            content: '';
+            display: inline-block;
+            background-image: url(../img/common/ico_location_gray.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 14px;
+            margin-right: 4px;
+            margin-bottom: -1px;
+          }
+        }
+        .lead {
+          transition: color 0.3s;
+          max-width: 460px;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-height: 1.8;
+        }
+      }
+    }
+
+    // 求人検索
+    .sec__jobsearch {
+      position: relative;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 41.6%;
+        height: 500px;
+        position: absolute;
+        bottom: -340px;
+        left: 0;
+        background-color: #faf8f5;
+        z-index: -1;
+      }
+
+      .jobsearch {
+        .innerWrap {
+          max-width: 1180px;
+        }
+        &__inner {
+          padding: 80px 180px 90px 190px;
+          background-color: #fff;
+          box-shadow: 0px 0px 30px -16px #777777;
+          margin-top: -140px;
+
+          @include mq-down(md)  {
+            padding: 40px 20px 40px;
+            margin-top: -32px;
+          }
+        }
+        &__head {
+          .sec-ttl01 {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            @include mq-down(md)  {
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+            }
+            @media all and (-ms-high-contrast: none) {
+              justify-content: flex-end;
+            }
+
+            .ja {
+              margin-left: 42px;
+            }
+            .eng {
+              margin-right: 110px;
+              @include mq-down(md)  {
+                margin-left: 42px;
+              }
+              @media all and (-ms-high-contrast: none) {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+              }
+            }
+
+            &:after {
+              content: '';
+              display: inline-block;
+              background-image: url(../img/common/ico_search_big.png);
+              background-size: contain;
+              background-repeat: no-repeat;
+              width: 29px;
+              height: 29px;
+              position: absolute;
+              top: 9px;
+              left: 0;
+            }
+          }
+        }
+        &__body {
+          margin-top: 32px;
+          @include mq-down(md)  {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+
+    // スタッフインタビュー
+    .sec__interview {
+      margin-top: 140px;
+      @media screen and (min-width:768px) and (max-width:1024px) {
+        margin-top: 40px;
+      }
+      @include mq-down(md)  {
+        margin-top: 64px;
+      }
+      .interview {
+        &__head {
+          display: flex;
+          justify-content: flex-end;
+          transform: translateY(100%);
+          position: relative;
+          z-index: 10;
+          @media screen and (min-width:768px) and (max-width:1024px) {
+            flex-direction: column;
+            align-items: flex-end;
+          }
+          @include mq-down(md)  {
+            transform: translateY(0);
+            justify-content: flex-start;
+          }
+
+          .sec-ttl01 {
+            margin-right: 72px;
+            @media screen and (min-width:768px) and (max-width:1024px) {
+              margin-right: 0;
+              margin-bottom: 24px;
+            }
+            @include mq-down(md)  {
+              margin-right: 20px;
+            }
+          }
+        }
+        &__body {
+          position: relative;
+          @include mq-down(md)  {
+            margin-top: 32px;
+          }
+        }
+
+        &__list {
+          height: 474px;
+          @include mq-down(md)  {
+            height: 318px;
+          }
+
+          &__wrap {
+            max-width: 350px;
+            margin: 0;
+            overflow: visible;
+          }
+
+          &__item {
+            margin-top: 140px;
+            transition: all 0.4s;
+            @include mq-down(md)  {
+              margin-top: 0;
+            }
+            a {
+              @include mq-up(md)  {
+                &:hover {
+                  img {
+                    transform: scale(1.075);
+                  }
+                }
+              }
+            }
+
+            .jobs {
+              display: inline-block;
+              background-color: $primary-color;
+              color: #fff;
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 4px 14px;
+              z-index: 2;
+            }
+            .img-holder {
+              width: 350px;
+              transition: all 0.4s;
+
+              .img {
+                overflow: hidden;
+
+                img {
+                  transition: all 0.3s ease-in-out;
+                }
+              }
+            }
+            .txt-holder {
+              display: none;
+            }
+          }
+        }
+        &__controls {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          &__item {
+            cursor: pointer;
+            transition: opacity 0.3s;
+            @include mq-up(md) {
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+
+            &.-prev {
+              transform: scale(-1,1);
+              margin-right: 10px;
+            }
+            &.-next {
+
+            }
+            &.swiper-button-disabled {
+              opacity: 0.4;
+              cursor: auto;
+            }
+          }
+        }
+
+        .icon-btn {
+          width: 170px;
+          height: auto;
+          margin-left: auto;
+          transform: translateY(-100%);
+          position: relative;
+          z-index: 10;
+          @include mq-down(md)  {
+            transform: translateY(0);
+            margin: 32px auto 0;
+          }
+        }
+      }
+
+      // swiper 関連
+      .swiper-slide {
+        &.swiper-slide-active {
+          width: 580px !important;
+          margin-top: 0;
+          @include mq-down(md)  {
+            width: 100% !important;
+          }
+
+          a {
+            display: block;
+            background-color: #fff;
+            box-shadow: 0px 0px 30px -16px #777777;
+            position: relative;
+          }
+          .jobs {
+            display: inline-block;
+            background-color: $primary-color;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 4px 14px;
+            z-index: 2;
+          }
+          .img-holder {
+            padding: 10px;
+            width: 100%;
+
+            .img {
+              @include keepAspect(65.5%);
+            }
+          }
+          .txt-holder {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 14px;
+            padding-bottom: 24px;
+
+            .name {
+              font-size: 2.4rem;
+            }
+            .year {
+              color: #bbbbbb;
+            }
+          }
+        }
+      }
+    }
+
+    // 仕事紹介
+    .sec__jobs {
+      margin-top: 140px;
+      @include mq-down(md)  {
+        margin-top: 80px;
+      }
+      .jobs {
+        &__inner {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          @include mq-up(md)  {
+            padding-right: 90px;
+          }
+          @include mq-down(md)  {
+            display: block;
+          }
+        }
+
+        .txt-holder {
+          flex: 0 0 50%;
+          padding-right: 7.2%;
+          @include mq-down(md)  {
+            padding-right: 0;
+          }
+
+          .lead {
+            margin-top: 48px;
+            @include mq-down(md)  {
+              margin-top: 24px;
+            }
+          }
+          .icon-btn {
+            width: 170px;
+            margin-top: 80px;
+            @include mq-down(md)  {
+              margin: 28px auto 0;
+            }
+          }
+        }
+        .img-holder {
+          flex: 0 0 50%;
+          @include mq-down(md)  {
+            width: 80%;
+            margin: 32px auto 0;
+          }
+
+          .img {
+
+          }
+          .logo {
+            margin-top: -170px;
+            margin-left: -80px;
+            @include mq-down(md)  {
+              margin-top: -90px;
+              margin-left: -40px;
+            }
+          }
+        }
+      }
+    }
+
+    // その他
+    .sec__others {
+      margin-top: 100px;
+      margin-bottom: -124px;
+      position: relative;
+      z-index: 10;
+      @include mq-down(md)  {
+        margin-top: 72px;
+        margin-bottom: -72px;
+      }
+
+      .others {
+        &__inner {
+          display: flex;
+          justify-content: flex-start;
+          @include mq-down(md)  {
+            display: block;
+          }
+        }
+
+        &__box {
+          flex: 1 1 50%;
+          padding: 68px 78px;
+          background-color: #faf8f5;
+          @media screen and (min-width:768px) and (max-width:1024px) {
+            padding: 68px 54px;
+          }
+          @include mq-down(md)  {
+            padding: 40px 24px;
+          }
+
+          &:first-child {
+            border-right: 3px solid #fff;
+            @include mq-down(md)  {
+              border-right: 0;
+              border-bottom: 3px solid #fff;
+            }
+          }
+
+          .wrap {
+            display: flex;
+          }
+          .icon {
+            margin-right: 78px;
+            @media screen and (min-width:768px) and (max-width:1024px) {
+              margin-right: 32px;
+            }
+            @include mq-down(md)  {
+              margin-right: 8px;
+              transform: scale(0.8);
+              transform-origin: top left;
+            }
+          }
+          .icon-btn {
+            width: 170px;
+            height: auto;
+            margin: 40px auto 0;
+            @include mq-down(md)  {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
