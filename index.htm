@@ -44,7 +44,7 @@
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- /フォント -->
 
   <!-- CSS -->
@@ -75,7 +75,7 @@
             </a>
           </h1>
           <div class="txt-recruit">
-            <span class="txt">採用サイト</span>
+            <a href="index.htm" class="txt">採用サイト</a>
           </div>
         </div>
         <div class="d-btn">
@@ -133,7 +133,7 @@
               <img src="img/index/hero01.jpg" alt="イメージ" class="ofi" loading="lazy">
             </div>
           </div>
-          <div class="mainVisua__nav">
+          <div class="mainVisual__nav">
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__list__item">
@@ -172,7 +172,7 @@
             </div>
             <div class="newjobs__body">
               <div class="head">
-                <p class="ttl">新着求人情報</p>
+                <p class="ttl c-top-txt">新着求人情報</p>
                 <div class="c-more-btn">
                   <a href="whatsnew_a_type.htm">一覧を見る</a>
                 </div>
@@ -181,7 +181,7 @@
                 <!-- swiper -->
                 <div class="swiper-container newjobs__container">
                   <div class="swiper-wrapper newjobs__wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide newjobs__slide">
                       <a href="#">
                         <div class="info">
                           <div class="img-holder">
@@ -199,7 +199,7 @@
                         </p>
                       </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide newjobs__slide">
                       <a href="#">
                         <div class="info">
                           <div class="img-holder">
@@ -217,7 +217,7 @@
                         </p>
                       </a>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide newjobs__slide">
                       <a href="#">
                         <div class="info">
                           <div class="img-holder">
@@ -236,9 +236,13 @@
                       </a>
                     </div>
                   </div>
-                  <div class="swiper-pagination newjobs__pagination"></div>
-                  <div class="swiper-button-prev newjobs__button-prev"></div>
-                  <div class="swiper-button-next newjobs__button-next"></div>
+                  <div class="swiper-options">
+                    <div class="swiper-pagination newjobs__pagination"></div>
+                    <div class="swiper-button">
+                      <div class="swiper-button-prev newjobs__button-prev"></div>
+                      <div class="swiper-button-next newjobs__button-next"></div>
+                    </div>
+                  </div>
                 </div>
                 <!-- swiper -->
               </div>
@@ -267,7 +271,7 @@
               </div>
               <div class="thought__wrap">
                 <div class="txt-holder">
-                  <p class="lead">
+                  <p class="lead c-top-txt">
                     私たちの歩みには、<br>
                     あなたの個性が必要です
                   </p>
@@ -304,7 +308,7 @@
             <div class="workplace__body">
               <div class="workplace__wrap">
                 <div class="txt-holder">
-                  <p class="lead">
+                  <p class="lead c-top-txt">
                     ドライバーの思いを反映させた、<br>
                     ゆとりある職場環境づくりに向けて。
                   </p>
@@ -345,7 +349,7 @@
             </div>
             <div class="interview__body">
               <div class="head">
-                <p class="ttl">インタビュー</p>
+                <p class="ttl c-top-txt">インタビュー</p>
                 <div class="c-more-btn">
                   <a href="interview_l.htm">一覧を見る</a>
                 </div>
@@ -443,7 +447,7 @@
             </div>
             <div class="common__body">
               <div class="txt-holder">
-                <p class="ttl">
+                <p class="ttl c-top-txt">
                   ダイバーシティな<br>
                   働き方
                 </p>
@@ -473,7 +477,7 @@
             </div>
             <div class="common__body">
               <div class="txt-holder">
-                <p class="ttl">
+                <p class="ttl c-top-txt">
                   スタッフの<br>
                   その後を追跡
                 </p>
@@ -483,7 +487,7 @@
               </div>
               <div class="img-holder">
                 <div class="img">
-                  <img src="img/index/workstyle01.jpg" alt="イメージ" class="ofi" loading="lazy">
+                  <img src="img/index/improvecareer01.jpg" alt="イメージ" class="ofi" loading="lazy">
                 </div>
               </div>
             </div>
@@ -512,30 +516,71 @@
               </div>
             </div>
             <div class="txt-holder">
-              <p class="lead">
-                人々の暮らしを支える<br>
-                確かな輸送品質を。
-              </p>
-              <p class="desc">
-                カントウ流通では、私たちと共に荷物配送を行う新たなドライバーを募集しています。未経験の方や大型免許の資格をお持ちでない方も大歓迎です。運転の技術や配送方法など、先輩社員が一から丁寧に指導します。若手の方から年配の方まで、さまざまな仲間が活躍するカントウ流通。まずは、あなたの「気持ち」をお聞かせください。
-              </p>
-              <div class="c-more-btn -white">
-                <a href="#">詳しく見る</a>
+              <div class="wrap">
+                <p class="lead">
+                  人々の暮らしを支える<br>
+                  確かな輸送品質を。
+                </p>
+                <p class="desc">
+                  カントウ流通では、私たちと共に荷物配送を行う新たなドライバーを募集しています。未経験の方や大型免許の資格をお持ちでない方も大歓迎です。運転の技術や配送方法など、先輩社員が一から丁寧に指導します。若手の方から年配の方まで、さまざまな仲間が活躍するカントウ流通。まずは、あなたの「気持ち」をお聞かせください。
+                </p>
+                <div class="c-more-btn -white">
+                  <a href="#">詳しく見る</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer__body">
-        <div class="footer__logo">
+        <div class="footer__body__top">
           <a href="index.htm">
             <div class="img">
               <img src="img/common/logo_ft.png" alt="株式会社カントウ流通" class="ofi" loading="lazy">
             </div>
           </a>
         </div>
-        <div class="footer__info">
-          
+        <div class="footer__body__bottom">
+          <div class="footer__body__info">
+            <p class="ttl">
+              総合お問い合わせ
+              <span class="small">（平日 9:00-18:00）</span>
+            </p>
+            <div class="tel-num">
+              <span class="txt-tel">TEL:</span>
+              <a href="tel:06-6417-4100">06-6417-4100</a>
+            </div>
+            <div class="c-blue-btn">
+              <a href="#">お問い合わせ</a>
+            </div>
+            <p class="address">
+              〒660-0064　兵庫県尼崎市稲葉荘4丁目20-1
+            </p>
+          </div>
+          <div class="footer__body__nav">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__list__item">
+                  <a href="index.htm">HOME</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="#">カントウ流通で働くとは</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="#">スタッフ紹介</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="#">ダイバーシティな働き方</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="#">Improve Career</a>
+                </li>
+                <li class="nav__list__item">
+                  <a href="kyujin_l.htm">求人情報</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </footer>

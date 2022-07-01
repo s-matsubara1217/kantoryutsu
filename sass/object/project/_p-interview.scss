@@ -1,0 +1,102 @@
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixins' as *;
+
+// インタビューリスト
+.interview {
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 0 0 29%;
+      margin-right: 6.5%;
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+        height: 100%;
+        display: flex;
+        flex-direction: column
+      }
+      .img-holder {
+        .img {
+          @include keepAspect(121.8%);
+        }
+      }
+      .txt-holder {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .lead {
+          line-height: 1.58;
+          font-size: 2.3rem;
+          margin-top: 30px;
+        }
+        .info {
+          margin-top: 24px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          &:after {
+            content: '';
+            display: inline-block;
+            background-image: url(../img/common/ico_arrow.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 14px;
+            align-self: center;
+            flex-shrink: 0;
+          }
+
+          .num-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 32px;
+
+            .staff {
+              font-family: $eng;
+              font-size: 1.3rem;
+              color: #a1abb6;
+              line-height: 1.1;
+            }
+            .num {
+              font-size: 3.6rem;
+              font-family: $eng;
+              font-weight: 300;
+              color: #a1abb6;
+              line-height: 1.1;
+              display: inline-block;
+              margin-top: 4px;
+            }
+          }
+          .position-holder {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            flex: 1 1 auto;
+            padding-right: 24px;
+
+            .position {
+
+            }
+            .year {
+              font-size: 1.4rem;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

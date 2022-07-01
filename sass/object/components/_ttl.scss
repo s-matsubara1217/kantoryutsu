@@ -4,5 +4,16 @@
 
 // セクションタイトル①
 .c-ttl01 {
-  
+  &__line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d9dde2;
+  }
+  &__eng {
+    font-family: $eng;
+    font-size: 1.6rem;
+    color: #a1abb6;
+    margin-top: 2px;
+  }
 }

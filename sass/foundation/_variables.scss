@@ -5,27 +5,30 @@
 //========================================
 
 // Colors
-$primary-color: #319041;
+$primary-color: #003980;
+$secondary-color: #4c75a3;
+$third-color: #a1abb6;
 
 // Light and Dark color
-$primary-dark: #246a30;
-$primary-light: #3eb652;
+$primary-dark: darken($primary-color,10%);
+$primary-light: lighten($primary-color,10%);
 
 // Background color
-$bg-color01: #faf8f5;
+$bg-color01: #f4f5f6;
 
 // Gradient color
 $gradient01: linear-gradient(90deg, #dedede, #dedede);
 
 // Format color
-$txt-color: #333333;
+$txt-color: #000000;
 $txt-gray-color: #999999;
 
 // Border color
 $border-color: #cccccc;
 
 // CUSTOM FONTS
-$eng: 'Archivo', sans-serif;
+$eng: 'Montserrat', sans-serif;
+$num: 'Lato', sans-serif;
 
 //font-family
 $gothic-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,

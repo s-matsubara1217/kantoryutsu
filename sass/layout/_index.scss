@@ -5,3 +5,358 @@
 /* ============================================
 // INDEX
 // ==========================================*/
+
+.front-page {
+
+  // 共通パーツ
+  .c-top-txt {
+    font-size: 3.6rem;
+    line-height: 2;
+
+    @include mq-down(xl) {
+      font-size: 3.0rem;
+    }
+  }
+
+  // メインビジュアル
+  .mainVisual {
+    max-width: 1440px + 80px;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    &__inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      position: relative;
+    }
+
+    &__copy {
+      position: absolute;
+      bottom: 70px;
+      left: 32px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .txt {
+        font-size: 3rem;
+        background-color: #fff;
+        padding-right: 20px;
+        letter-spacing: 0.15em;
+
+        margin-top: 16px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      
+    }
+    &__hero {
+      flex: 0 0 60%;
+      margin-left: 18%;
+
+      .img {
+        height: 850px;
+      }
+    }
+    &__nav {
+      flex: 0 0 calc(100% - 60% - 18%);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      .nav {
+        &__list {
+          &__item {
+            .link {
+              display: block;
+              padding: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // 新着求人情報
+  .sec__newjobs {
+    margin-top: 126px;
+
+    .newjobs {
+      &__head {
+
+      }
+      &__body {
+        margin-top: 100px;
+        padding-left: 9.16%;
+
+        .head {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          .ttl {
+            margin-right: 64px;
+          }
+        }
+        .body {
+          margin-top: 40px;
+        }
+      }
+
+      &__slide {
+        a {
+          display: block;
+          background-color: #f4f5f6;
+          padding: 18px 20px;
+          border-radius: 4px;
+        }
+
+        .info {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+
+          .img-holder {
+            flex: 0 0 35%;
+            margin-right: 5%;
+            .img {
+              @include keepAspect(72.4%);
+            }
+          }
+          .txt-holder {
+            flex: 1 1 auto;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .status {
+              color: #fff;
+              background-color: #46679d;
+              width: 56px;
+              height: 24px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.2rem;
+              border-radius: 4px;
+            }
+            .date {
+              font-family: $num;
+              font-size: 1.4rem;
+              font-weight: 400;
+              color: #4c75a3;
+              display: inline-block;
+              margin-top: 2px;
+            }
+          }
+        }
+        .lead {
+          margin-top: 8px;
+          max-width: 280px;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      // swiper関連
+      .swiper-container {
+        width: 320px;
+        overflow: visible;
+      }
+      .swiper-button {
+        position: relative;
+        &-prev,
+        &-next {
+
+        }
+      }
+      .swiper-pagination {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  // Thought
+  .sec__thought {
+    margin-top: 212px;
+
+    .thought {
+      &__head {
+
+      }
+      &__body {
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .img-holder01 {
+          .img {
+            @include keepAspect(153.8%);
+          }
+        }
+        .txt-holder {
+          .lead {
+            line-height: 1.7;
+            margin-top: 16px;
+          }
+          .desc {
+            margin-top: 36px;
+          }
+        }
+        .img-holder02 {
+          margin-top: 64px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          .img {
+            flex: 0 0 45%;
+            @include keepAspect(102.8%);
+          }
+        }
+      }
+
+      &__wrap {
+        &:first-child {
+          flex: 0 0 43.3%;
+          margin-right: 5%;
+        }
+        &:nth-child(2) {
+          flex: 1 1 auto;
+        }
+      }
+    }
+  }
+
+  // カントウ流通で働くとは
+  .sec__workplace {
+    margin-top: 170px;
+
+    .workplace {
+      &__head {
+
+      }
+      &__body {
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .txt-holder {
+          .lead {
+            line-height: 1.7;
+            margin-top: 16px;
+          }
+          .desc {
+            margin-top: 32px;
+          }
+          .c-more-btn {
+            margin-top: 32px;
+          }
+        }
+        .img-holder01 {
+          margin-top: 80px;
+
+          .img {
+            @include keepAspect(57.8%);
+          }
+        }
+        .img-holder02 {
+          .img {
+            @include keepAspect(153.8%);
+          }
+        }
+      }
+
+      &__wrap {
+        &:first-child {
+          flex: 1 1 auto;
+        }
+        &:nth-child(2) {
+          flex: 0 0 43.3%;
+          margin-left: 4.8%;
+        }
+      }
+    }
+  }
+
+  // インタビュー
+  .sec__interview {
+    margin-top: 180px;
+
+    .interview {
+      &__head {
+        
+      }
+      &__body {
+        margin-top: 80px;
+        padding: 0 50px;
+
+        .head {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          .ttl {
+            margin-right: 60px;
+          }
+        }
+        .body {
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+
+  // ダイバーシティな働き方
+  // Improve Career
+  .sec__common {
+    margin-top: 128px;
+
+    .common {
+      &__head {
+
+      }
+      &__body {
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 9.2%;
+
+        .txt-holder {
+          flex: 1 1 auto;
+
+          .ttl {
+            margin-top: 64px;
+          }
+          .c-more-btn {
+            margin-top: 68px;
+          }
+        }
+        .img-holder {
+          margin-left: 5%;
+          flex: 0 0 59%;
+
+          .img {
+            @include keepAspect(55.5%);
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+}

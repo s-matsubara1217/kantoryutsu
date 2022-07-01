@@ -3,6 +3,8 @@
 -------------------------------*/
 const newjobsSwiper = new Swiper('.newjobs__container', {
 
+  slidesPerView: 1,
+  spaceBetween: 12,
   loop: true,
 
   pagination: {

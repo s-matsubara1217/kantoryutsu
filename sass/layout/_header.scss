@@ -7,179 +7,46 @@
   position: absolute;
   z-index: 50;
   width: 100%;
-  &.fixHeader {
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // width: 100%;
-    // max-width: 500px;
-    // height: 150px;
-    // display: flex;
-    // justify-content: flex-end;
-    // transform: translateY(-100%);
-    // transition: transform 300ms $bezier-easeOutCubic;
-    // @include mq-down(md) {
-    //   height: 120px;
-    // }
-    // @include mq-down(sm) {
-    //   height: 90px;
-    // }
-    .header__wrap {
-      .logo,
-      .nav__list {
-        display: none;
-      }
-      .nav__recruit {
-        position: fixed;
-        top: 32px;
-        right: 120px;
-        transform: translateY(-200%);
-        transition: transform 600ms $bezier-easeOutCubic;
-        @include mq-down(md) {
-          top: 28px;
-          right: 86px;
-        }
-      }
-    }
-  }
   &__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding-left: 40px;
-    padding-right: 24px;
-    @include mq-down(md)  {
-      padding-left: 16px;
-      padding-right: 0;
-    }
+    padding: 64px 72px;
 
     .logo-holder {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 26px 0;
-      @include mq-down(md)  {
-        padding: 20px 0;
-      }
-
-      .logo {
-        width: 260px;
-        transition: opacity 0.3s;
-        @include mq-down(md)  {
-          width: 180px;
-        }
-        @include mq-up(md)  {
-          &:hover {
-            opacity: 0.7;
-          }
-        }
-        .link {
-          display: block;
-        }
-      }
-      .txt-recruit {
-        margin-left: 12px;
-        .txt {
-          color: #cccccc;
-          border: 1px solid $border-color;
-          padding: 6px 10px;
-          @include mq-down(md)  {
-            font-size: 1.2rem;
-            padding: 6px;
-          }
-        }
-      }
+      max-width: 117px;
     }
-    .nav {
-      height: 100%;
-      margin-left: 24px;
+    .txt-recruit {
+      width: 117px;
+      height: 32px;
+      background-color: $third-color;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      @include mq-down(md)  {
-        display: none;
-      }
+      margin-top: 16px;
+      border-radius: 2px;
 
-      &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @media screen and (max-width: 1200px) {
-          display: none;
-        }
-        &__item {
-          &:not(:first-child) {
-            margin-left: 20px;
-          }
-          .link {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            font-size: 1.4rem;
-            padding: 37px 0;
-            &:before {
-              content: '';
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background: $primary-color;
-              transform-origin: right;
-              transform: scaleX(0);
-              transition: transform 400ms $bezier-easeOutCubic;
-            }
-            @include mq-up(md) {
-              &:hover {
-                &:before {
-                  transform: scaleX(1);
-                  transform-origin: left;
-                }
-              }
-            }
-          }
-        }
-      }
-      &__recruit {
-        width: 170px;
-        height: 53px;
-        margin-left: 16px;
-
-        @include mq-down(md) {
-          height: 56px;
-          margin-left: 0;
-        }
-        @include mq-down(sm) {
-          width: 130px;
-        }
-        @include mq-down(xs) {
-          height: 50px;
-        }
+      a {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
       }
     }
   }
 }
-.lower-kyujin_d {
-  .header__wrap {
-    .nav__list__item {
-      .link {
-        color: $txt-color;
-        &:before {
-          background-color: $txt-color;
-        }
-      }
+.front-page {
+  .header {
+    max-width: 1440px + 80px;
+    padding: 0 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__wrap {
+      padding: 64px 32px;
     }
   }
 }
 
 // D-BTN
 .d-btn {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 60px;
@@ -194,7 +61,7 @@
       background: $primary-dark;
     }
   }
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 768px) {
     display: flex;
   }
   @include mq-down(md) {
