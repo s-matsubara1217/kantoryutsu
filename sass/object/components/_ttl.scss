@@ -15,5 +15,8 @@
     font-size: 1.6rem;
     color: #a1abb6;
     margin-top: 2px;
+    @include mq-down(md) {
+      font-size: 1.4rem;
+    }
   }
 }

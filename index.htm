@@ -67,27 +67,28 @@
     <header class="header">
       <div class="header__wrap">
         <div class="logo-holder">
-          <h1 class="logo">
-            <a href="index.htm" class="link">
+          <a href="index.htm">
+            <h1 class="logo">
               <div class="img">
                 <img class="ofi" src="img/common/logo_hd.png" alt="株式会社 カンソー">
               </div>
-            </a>
-          </h1>
-          <div class="txt-recruit">
-            <a href="index.htm" class="txt">採用サイト</a>
-          </div>
-        </div>
-        <div class="d-btn">
-          <div class="d-btn__wrap">
-            <span class="icon"><span></span></span>
-          </div>
+            </h1>
+            <div class="txt-recruit">
+              <span href="index.htm" class="txt">採用サイト</span>
+            </div>
+          </a>
         </div>
       </div>
     </header>
     <!-- /ヘッダー（共通）-->
 
     <!-- ハンバーガー（共通） -->
+    <div class="d-btn">
+      <div class="d-btn__wrap">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <div class="d-menuOverlay">
       <div class="d-menu">
         <div class="d-menu__wrap px-50">
@@ -137,22 +138,22 @@
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__list__item">
-                  <a class="link" href="index.htm">HOME</a>
+                  <a class="link u-hover-underline" href="index.htm">HOME</a>
                 </li>
                 <li class="nav__list__item">
-                  <a class="link" href="#">カントウ流通で働くとは</a>
+                  <a class="link u-hover-underline" href="#">カントウ流通で働くとは</a>
                 </li>
                 <li class="nav__list__item">
-                  <a class="link" href="#">スタッフ紹介</a>
+                  <a class="link u-hover-underline" href="#">スタッフ紹介</a>
                 </li>
                 <li class="nav__list__item">
-                  <a class="link" href="#">ダイバーシティな働き方</a>
+                  <a class="link u-hover-underline" href="#">ダイバーシティな働き方</a>
                 </li>
                 <li class="nav__list__item">
-                  <a class="link" href="#">Improve Career</a>
+                  <a class="link u-hover-underline" href="#">Improve Career</a>
                 </li>
                 <li class="nav__list__item">
-                  <a class="link" href="kyujin_l.htm">求人情報</a>
+                  <a class="link u-hover-underline" href="kyujin_l.htm">求人情報</a>
                 </li>
               </ul>
             </nav>
@@ -309,7 +310,7 @@
               <div class="workplace__wrap">
                 <div class="txt-holder">
                   <p class="lead c-top-txt">
-                    ドライバーの思いを反映させた、<br>
+                    ドライバーの思いを反映させた、<br class="u-pcOnly">
                     ゆとりある職場環境づくりに向けて。
                   </p>
                   <p class="desc">
@@ -533,54 +534,67 @@
         </div>
       </div>
       <div class="footer__body">
-        <div class="footer__body__top">
-          <a href="index.htm">
-            <div class="img">
-              <img src="img/common/logo_ft.png" alt="株式会社カントウ流通" class="ofi" loading="lazy">
-            </div>
-          </a>
-        </div>
-        <div class="footer__body__bottom">
-          <div class="footer__body__info">
-            <p class="ttl">
-              総合お問い合わせ
-              <span class="small">（平日 9:00-18:00）</span>
-            </p>
-            <div class="tel-num">
-              <span class="txt-tel">TEL:</span>
-              <a href="tel:06-6417-4100">06-6417-4100</a>
-            </div>
-            <div class="c-blue-btn">
-              <a href="#">お問い合わせ</a>
-            </div>
-            <p class="address">
-              〒660-0064　兵庫県尼崎市稲葉荘4丁目20-1
-            </p>
+        <div class="footer__body__inner innerWrap">
+          <div class="footer__body__top">
+            <a href="index.htm">
+              <div class="img">
+                <img src="img/common/logo_ft.png" alt="株式会社カントウ流通" class="ofi" loading="lazy">
+              </div>
+            </a>
           </div>
-          <div class="footer__body__nav">
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__list__item">
-                  <a href="index.htm">HOME</a>
-                </li>
-                <li class="nav__list__item">
-                  <a href="#">カントウ流通で働くとは</a>
-                </li>
-                <li class="nav__list__item">
-                  <a href="#">スタッフ紹介</a>
-                </li>
-                <li class="nav__list__item">
-                  <a href="#">ダイバーシティな働き方</a>
-                </li>
-                <li class="nav__list__item">
-                  <a href="#">Improve Career</a>
-                </li>
-                <li class="nav__list__item">
-                  <a href="kyujin_l.htm">求人情報</a>
-                </li>
-              </ul>
-            </nav>
+          <div class="footer__body__bottom">
+            <div class="footer__body__info">
+              <p class="ttl">
+                総合お問い合わせ
+                <span class="small">（平日 9:00-18:00）</span>
+              </p>
+              <div class="tel-num">
+                <span class="txt-tel">TEL:</span>
+                <a href="tel:06-6417-4100">06-6417-4100</a>
+              </div>
+              <div class="c-blue-btn">
+                <a href="#">お問い合わせ</a>
+              </div>
+              <p class="address">
+                〒660-0064　兵庫県尼崎市稲葉荘4丁目20-1
+              </p>
+            </div>
+            <div class="footer__body__nav">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__list__item">
+                    <a class="u-hover-underline" href="index.htm">HOME</a>
+                  </li>
+                  <li class="nav__list__item">
+                    <a class="u-hover-underline" href="#">カントウ流通で働くとは</a>
+                  </li>
+                  <li class="nav__list__item">
+                    <a class="u-hover-underline" href="#">スタッフ紹介</a>
+                  </li>
+                  <li class="nav__list__item">
+                    <a class="u-hover-underline" href="#">ダイバーシティな働き方</a>
+                  </li>
+                  <li class="nav__list__item">
+                    <a class="u-hover-underline" href="#">Improve Career</a>
+                  </li>
+                  <li class="nav__list__item">
+                    <a class="u-hover-underline" href="kyujin_l.htm">求人情報</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
+          <ul class="footer__gaList">
+            <li class="footer__gaList__item">
+              <a class="link txt u-hover-underline" href="#">Googleアナリティクスの利用について</a>
+            </li>
+            <li class="footer__gaList__item">
+              <a class="link txt u-hover-underline" href="#">プライバシーポリシー</a>
+            </li>
+            <li class="footer__gaList__item">
+              <span class="txt">© Kantou-Ryutsu inc.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
@@ -591,7 +605,7 @@
       <a class="link" href="#container">
         <div class="icon">
           <div class="img">
-            <img class="ofi" src="img/common/i_pagetop.png" alt="TOP">
+            <img class="ofi" src="img/common/pagetop.png" alt="TOP">
           </div>
         </div>
       </a>

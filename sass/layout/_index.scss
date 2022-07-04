@@ -16,6 +16,9 @@
     @include mq-down(xl) {
       font-size: 3.0rem;
     }
+    @include mq-down(md) {
+      font-size: 2.3rem;
+    }
   }
 
   // メインビジュアル
@@ -23,12 +26,18 @@
     max-width: 1440px + 80px;
     padding: 0 40px;
     margin: 0 auto;
+    @include mq-down(md) {
+      padding: 0;
+    }
 
     &__inner {
       display: flex;
       justify-content: flex-start;
       align-items: stretch;
       position: relative;
+      @include mq-down(md) {
+        display: block;
+      }
     }
 
     &__copy {
@@ -39,14 +48,23 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+      @include mq-down(md) {
+        bottom: 48px;
+        left: 12px;
+      }
 
       .txt {
         font-size: 3rem;
         background-color: #fff;
         padding-right: 20px;
         letter-spacing: 0.15em;
-
         margin-top: 16px;
+        @include mq-down(md) {
+          font-size: 2.3rem;
+          margin-top: 8px;
+          padding: 0 12px;
+        }
+
         &:first-child {
           margin-top: 0;
         }
@@ -56,9 +74,23 @@
     &__hero {
       flex: 0 0 60%;
       margin-left: 18%;
+      @include mq-down(md) {
+        width: 90%;
+        margin-left: 10%;
+        margin-top: 68px;
+      }
 
       .img {
         height: 850px;
+        @include mq-down(md) {
+          height: 445px;
+        }
+
+        img {
+          @include mq-down(md) {
+            object-position: left center;
+          }
+        }
       }
     }
     &__nav {
@@ -66,23 +98,29 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      @include mq-down(xl) {
+        flex: 0 0 25%;
+      }
+      @include mq-down(md) {
+        display: none;
+      }
 
       .nav {
         &__list {
           &__item {
-            .link {
-              display: block;
-              padding: 6px;
-            }
+            margin: 10px 0;
           }
         }
       }
     }
   }
-  
+
   // 新着求人情報
   .sec__newjobs {
     margin-top: 126px;
+    @include mq-down(md) {
+      margin-top: 64px;
+    }
 
     .newjobs {
       &__head {
@@ -91,18 +129,31 @@
       &__body {
         margin-top: 100px;
         padding-left: 9.16%;
+        @include mq-down(md) {
+          margin-top: 28px;
+          padding-left: 0;
+        }
 
         .head {
           display: flex;
           justify-content: flex-start;
           align-items: center;
+          @include mq-down(md) {
+            justify-content: space-between;
+          }
 
           .ttl {
             margin-right: 64px;
+            @include mq-down(md) {
+              margin-right: 32px;
+            }
           }
         }
         .body {
           margin-top: 40px;
+          @include mq-down(md) {
+            margin-top: 24px;
+          }
         }
       }
 
@@ -112,6 +163,13 @@
           background-color: #f4f5f6;
           padding: 18px 20px;
           border-radius: 4px;
+
+          @include mq-up(md) {
+            transition: opacity 0.5s;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
         }
 
         .info {
@@ -157,12 +215,13 @@
           }
         }
         .lead {
-          margin-top: 8px;
+          margin-top: 12px;
           max-width: 280px;
           overflow: hidden;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
+          line-height: 1.8;
         }
       }
 
@@ -173,14 +232,44 @@
       }
       .swiper-button {
         position: relative;
+        width: 220px;
+        height: 14px;
+        margin: 32px auto 0;
         &-prev,
         &-next {
+          background-image: url(../img/index/ico_arrow_lg.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 7px;
+          height: 14px;
+          margin-top: 0;
+          top: 0;
+        }
 
+        &-prev {
+          transform: scale(-1,1);
         }
       }
       .swiper-pagination {
+        line-height: 0;
         left: 50%;
         transform: translateX(-50%);
+
+        &-bullet {
+          width: 38px;
+          height: 1px;
+          background-color: #eceff5;
+          opacity: 1;
+          margin-right: 5px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &-active {
+            background-color: $primary-color;
+          }
+        }
       }
     }
   }
@@ -188,6 +277,9 @@
   // Thought
   .sec__thought {
     margin-top: 212px;
+    @include mq-down(md) {
+      margin-top: 88px;
+    }
 
     .thought {
       &__head {
@@ -198,6 +290,10 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        @include mq-down(md) {
+          margin-top: 24px;
+          flex-direction: column;
+        }
 
         .img-holder01 {
           .img {
@@ -208,9 +304,15 @@
           .lead {
             line-height: 1.7;
             margin-top: 16px;
+            @include mq-down(md) {
+              margin-top: 0;
+            }
           }
           .desc {
             margin-top: 36px;
+            @include mq-down(md) {
+              margin-top: 16px;
+            }
           }
         }
         .img-holder02 {
@@ -218,10 +320,16 @@
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
+          @include mq-down(md) {
+            margin-top: 32px;
+          }
 
           .img {
             flex: 0 0 45%;
             @include keepAspect(102.8%);
+            @include mq-down(md) {
+              flex: 0 0 46.5%;
+            }
           }
         }
       }
@@ -230,9 +338,16 @@
         &:first-child {
           flex: 0 0 43.3%;
           margin-right: 5%;
+          @include mq-down(md) {
+            width: 75%;
+            margin: 0 auto;
+          }
         }
         &:nth-child(2) {
           flex: 1 1 auto;
+          @include mq-down(md) {
+            margin-top: 32px;
+          }
         }
       }
     }
@@ -241,6 +356,9 @@
   // カントウ流通で働くとは
   .sec__workplace {
     margin-top: 170px;
+    @include mq-down(md) {
+      margin-top: 88px;
+    }
 
     .workplace {
       &__head {
@@ -251,21 +369,38 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        @include mq-down(md) {
+          margin-top: 32px;
+          flex-direction: column-reverse;
+        }
 
         .txt-holder {
           .lead {
             line-height: 1.7;
             margin-top: 16px;
+            @include mq-down(md) {
+              margin-top: 0;
+              font-size: 2.2rem;
+            }
           }
           .desc {
             margin-top: 32px;
+            @include mq-down(md) {
+              margin-top: 16px;
+            }
           }
           .c-more-btn {
             margin-top: 32px;
+            @include mq-down(md) {
+              margin-top: 28px;
+            }
           }
         }
         .img-holder01 {
           margin-top: 80px;
+          @include mq-down(md) {
+            margin-top: 48px;
+          }
 
           .img {
             @include keepAspect(57.8%);
@@ -281,10 +416,17 @@
       &__wrap {
         &:first-child {
           flex: 1 1 auto;
+          @include mq-down(md) {
+            margin-top: 40px;
+          }
         }
         &:nth-child(2) {
           flex: 0 0 43.3%;
           margin-left: 4.8%;
+          @include mq-down(md) {
+            width: 75%;
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -293,6 +435,9 @@
   // インタビュー
   .sec__interview {
     margin-top: 180px;
+    @include mq-down(md) {
+      margin-top: 90px;
+    }
 
     .interview {
       &__head {
@@ -301,18 +446,31 @@
       &__body {
         margin-top: 80px;
         padding: 0 50px;
+        @include mq-down(md) {
+          margin-top: 24px;
+          padding: 0;
+        }
 
         .head {
           display: flex;
           justify-content: flex-start;
           align-items: center;
+          @include mq-down(md) {
+            justify-content: space-between;
+          }
 
           .ttl {
             margin-right: 60px;
+            @include mq-down(md) {
+              margin-right: 32px;
+            }
           }
         }
         .body {
           margin-top: 80px;
+          @include mq-down(md) {
+            margin-top: 40px;
+          }
         }
       }
     }
@@ -322,6 +480,9 @@
   // Improve Career
   .sec__common {
     margin-top: 128px;
+    @include mq-down(md) {
+      margin-top: 80px;
+    }
 
     .common {
       &__head {
@@ -333,20 +494,36 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding-left: 9.2%;
+        @include mq-down(md) {
+          margin-top: 28px;
+          display: block;
+          padding-left: 0;
+        }
 
         .txt-holder {
           flex: 1 1 auto;
 
           .ttl {
             margin-top: 64px;
+            @include mq-down(md) {
+              margin-top: 0;
+              line-height: 1.8;
+            }
           }
           .c-more-btn {
             margin-top: 68px;
+            @include mq-down(md) {
+              margin-top: 24px;
+            }
           }
         }
         .img-holder {
           margin-left: 5%;
           flex: 0 0 59%;
+          @include mq-down(md) {
+            margin-left: 0;
+            margin-top: 32px;
+          }
 
           .img {
             @include keepAspect(55.5%);

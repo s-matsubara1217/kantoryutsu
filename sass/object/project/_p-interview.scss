@@ -8,23 +8,54 @@
     justify-content: flex-start;
     align-items: stretch;
     flex-wrap: wrap;
+    @include mq-down(md) {
+      display: block;
+    }
 
     &__item {
       flex: 0 0 29%;
       margin-right: 6.5%;
+      @include mq-down(md) {
+        width: 85%;
+        margin: 40px auto 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
       &:nth-child(3n+3) {
         margin-right: 0;
+        @include mq-down(md) {
+          margin-right: auto;
+        }
       }
 
       a {
         display: block;
         height: 100%;
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+
+        @include mq-up(md) {
+          &:hover {
+            img {
+              transform: scale(1.075)
+            }
+            .lead {
+              color: $primary-color;
+            }
+          }
+        }
       }
       .img-holder {
         .img {
           @include keepAspect(121.8%);
+          overflow: hidden;
+
+          img {
+            transition: transform 0.5s;
+          }
         }
       }
       .txt-holder {
@@ -37,12 +68,21 @@
           line-height: 1.58;
           font-size: 2.3rem;
           margin-top: 30px;
+          transition: color 0.3s;
+          @include mq-down(md) {
+            font-size: 1.9rem;
+            margin-top: 16px;
+          }
         }
         .info {
           margin-top: 24px;
           display: flex;
           justify-content: flex-start;
           align-items: flex-start;
+          @include mq-down(md) {
+            margin-top: 12px;
+            align-items: center;
+          }
 
           &:after {
             content: '';
@@ -62,12 +102,18 @@
             align-items: center;
             flex-direction: column;
             margin-right: 32px;
+            @include mq-down(md) {
+              margin-right: 24px;
+            }
 
             .staff {
               font-family: $eng;
               font-size: 1.3rem;
               color: #a1abb6;
               line-height: 1.1;
+              @include mq-down(md) {
+                font-size: 1.2rem;
+              }
             }
             .num {
               font-size: 3.6rem;
@@ -77,6 +123,9 @@
               line-height: 1.1;
               display: inline-block;
               margin-top: 4px;
+              @include mq-down(md) {
+                font-size: 3rem;
+              }
             }
           }
           .position-holder {

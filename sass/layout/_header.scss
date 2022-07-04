@@ -9,12 +9,32 @@
   width: 100%;
   &__wrap {
     padding: 64px 72px;
+    @include mq-down(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
     .logo-holder {
+      width: 9.75%;
       max-width: 117px;
+      @include mq-down(md) {
+        width: 79.5px;
+      }
+
+      a {
+        @include mq-up(md) {
+          transition: opacity 0.5s;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      .logo {
+      }
     }
     .txt-recruit {
-      width: 117px;
+      width: 100%;
       height: 32px;
       background-color: $third-color;
       display: flex;
@@ -22,11 +42,17 @@
       align-items: center;
       margin-top: 16px;
       border-radius: 2px;
+      @include mq-down(md) {
+        height: 28px;
+      }
 
-      a {
+      span {
         font-size: 1.4rem;
         font-weight: bold;
         color: white;
+        @include mq-down(md) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -37,55 +63,43 @@
     padding: 0 40px;
     left: 50%;
     transform: translateX(-50%);
+    @include mq-down(md) {
+      padding: 0;
+    }
 
     &__wrap {
       padding: 64px 32px;
+      @include mq-down(md) {
+        padding: 32px 24px;
+      }
     }
   }
 }
 
 // D-BTN
 .d-btn {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 102px;
   flex-shrink: 0;
-  background: $primary-color;
   cursor: pointer;
-  transition: background-color 400ms $bezier-easeOutCubic 0ms;
   z-index: 101;
-  @include mq-up(md) {
-    &:hover {
-      background: $primary-dark;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    display: flex;
-  }
-  @include mq-down(md) {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    width: 56px;
-    height: 75px;
-    margin-left: 12px;
-  }
   &.js-open {
-    .icon {
-      &:before {
-        transform: translate(0, 0px) rotate(45deg);
-      }
-      &:after {
-        transform: translate(0, -2px) rotate(-45deg);
-      }
+    .d-btn__wrap {
       span {
-        display: none;
+        &:nth-child(1) {
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+          margin-top: -1px;
+        }
       }
-    }
-    &.u-spOnly {
-      background-color: $primary-dark;
     }
   }
   &.u-spOnly {
@@ -95,48 +109,22 @@
   }
   &__wrap {
     position: relative;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
-    @include mq-down(md) {
-      width: 20px;
-      height: 20px;
-    }
-    .icon {
+    span {
       display: block;
-      width: 100%;
-      padding: 10px 0;
-      height: 1px;
-      @include mq-down(md) {
-        padding: 8px 0;
-      }
-      span,
-      &::before,
-      &::after {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        transition: all 400ms $bezier-easeOutCubic;
-      }
-      &::before,
-      &::after {
-        content: '';
-      }
-      &:before {
-        transform: translate(0, -6px);
-        @include mq-down(md) {
-          transform: translate(0, -5px);
-        }
-      }
-      &:after {
-        transform: translate(0, 6px);
-        @include mq-down(md) {
-          transform: translate(0, 5px);
-        }
+      width: 28px;
+      height: 2px;
+      background: #000;
+      transition: all 400ms $bezier-easeOutCubic;
+
+      &:last-child {
+        margin-top: 3px;
       }
     }
   }
@@ -181,7 +169,7 @@
     padding-bottom: 80px;
     transform-origin: right;
     cursor: auto;
-    background: $primary-dark;
+    background: #fff;
     transition: transform 400ms $bezier-easeOutSine;
     transform: translateX(100%);
     @include mq-up(md) {
@@ -194,26 +182,22 @@
       margin-top: 30px;
       &__list {
         &__item {
-          border-bottom: 1px solid rgba(#fff, 0.15);
+          border-bottom: 1px solid #d9dde2;
           &:first-child {
-            border-top: 1px solid rgba(#fff, 0.15);
+            border-top: 1px solid #d9dde2;
           }
           .link {
             position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 20px 16px 12px;
-            color: #fff;
-            font-weight: bold;
+            padding: 19px 6.6vw;
+            font-size: 1.2rem;
             @include mq-up(md) {
               transition: opacity 0.3s;
               &:hover {
                 opacity: 0.7;
               }
-            }
-            @include mq-down(sm) {
-              padding: 12px;
             }
           }
         }
