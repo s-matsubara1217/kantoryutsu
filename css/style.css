@@ -3987,6 +3987,7 @@ a {
   background-color: #eceff5;
   opacity: 1;
   margin-right: 5px;
+  border-radius: 0;
 }
 .front-page .sec__newjobs .newjobs .swiper-pagination-bullet:last-child {
   margin-right: 0;
