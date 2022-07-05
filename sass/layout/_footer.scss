@@ -14,11 +14,12 @@
   &__recruit {
     .recruit {
       &__head {
-        // max-width: 1280px;
         padding: 0 40px;
         transform: translateY(100%);
         margin: 0 auto;
         margin-bottom: -40px;
+        position: relative;
+        z-index: 5;
         @include mq-down(md) {
           margin-bottom: -20px;
         }
@@ -53,6 +54,9 @@
             margin: 0 auto;
             @include mq-down(xl) {
               margin: 32px auto;
+            }
+            @media all and (-ms-high-contrast: none) {
+              margin: 0;
             }
           }
           .lead {
@@ -229,6 +233,9 @@
               padding-right: 0;
               margin-right: 8%;
             }
+            @media all and (-ms-high-contrast: none) {
+              flex: 0 0 45%;
+            }
           }
         }
       }
@@ -239,10 +246,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    @include mq-down(xl) {
+      margin-right: 56px;
+    }
     @include mq-down(md) {
       display: block;
       margin-top: 32px;
       text-align: center;
+      margin-right: 0;
     }
 
     &__item {
