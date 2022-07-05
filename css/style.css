@@ -3054,7 +3054,7 @@ a {
   position: fixed;
   bottom: 14px;
   right: 4px;
-  z-index: 100;
+  z-index: 49;
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -3124,81 +3124,64 @@ a {
 }
 
 .header {
-  position: absolute;
-  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 49;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: opacity 0.5s;
 }
 .header__wrap {
-  padding: 64px 72px;
+  width: 100%;
+  max-width: 1280px;
+  padding: 24px 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   .header__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding: 20px 24px;
   }
 }
-.header__wrap .logo-holder {
-  width: 9.75%;
-  max-width: 117px;
+.header__wrap .logo-holder .logo {
+  width: 204px;
 }
 @media screen and (max-width: 768px) {
-  .header__wrap .logo-holder {
-    width: 79.5px;
+  .header__wrap .logo-holder .logo {
+    width: 102px;
   }
 }
-@media screen and (min-width: 769px) {
-  .header__wrap .logo-holder a {
-    transition: opacity 0.5s;
-  }
-  .header__wrap .logo-holder a:hover {
-    opacity: 0.8;
+@media screen and (max-width: 768px) {
+  .header__wrap .nav {
+    display: none;
   }
 }
-.header__wrap .txt-recruit {
-  width: 100%;
-  height: 32px;
-  background-color: #a1abb6;
+.header__wrap .nav__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
-  border-radius: 2px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-@media screen and (max-width: 768px) {
-  .header__wrap .txt-recruit {
-    height: 28px;
+.header__wrap .nav__list__item {
+  margin-right: 32px;
+}
+@media screen and (max-width: 1200px) {
+  .header__wrap .nav__list__item {
+    margin-right: 24px;
+    font-size: 1.4rem;
   }
 }
-.header__wrap .txt-recruit span {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: white;
-}
-@media screen and (max-width: 768px) {
-  .header__wrap .txt-recruit span {
-    font-size: 1.2rem;
-  }
+.header__wrap .nav__list__item:last-child {
+  margin-right: 0;
 }
 
 .front-page .header {
-  max-width: 1520px;
-  padding: 0 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  opacity: 0;
 }
-@media screen and (max-width: 768px) {
-  .front-page .header {
-    padding: 0;
-  }
-}
-.front-page .header__wrap {
-  padding: 64px 32px;
-}
-@media screen and (max-width: 768px) {
-  .front-page .header__wrap {
-    padding: 32px 24px;
-  }
+.front-page .header.visible {
+  opacity: 1;
 }
 
 .d-btn {
@@ -3712,6 +3695,63 @@ a {
     display: block;
   }
 }
+.front-page .mainVisual__logo {
+  position: absolute;
+  top: 60px;
+  left: 56px;
+}
+@media screen and (max-width: 1200px) {
+  .front-page .mainVisual__logo {
+    left: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .front-page .mainVisual__logo {
+    left: 20px;
+    top: -36px;
+  }
+}
+.front-page .mainVisual__logo .logo-holder {
+  width: 117px;
+}
+@media screen and (max-width: 768px) {
+  .front-page .mainVisual__logo .logo-holder {
+    width: 79.5px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .front-page .mainVisual__logo .logo-holder a {
+    transition: opacity 0.5s;
+  }
+  .front-page .mainVisual__logo .logo-holder a:hover {
+    opacity: 0.8;
+  }
+}
+.front-page .mainVisual__logo .txt-recruit {
+  width: 100%;
+  height: 32px;
+  background-color: #a1abb6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  border-radius: 2px;
+}
+@media screen and (max-width: 768px) {
+  .front-page .mainVisual__logo .txt-recruit {
+    height: 28px;
+  }
+}
+.front-page .mainVisual__logo .txt-recruit span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .front-page .mainVisual__logo .txt-recruit span {
+    font-size: 1.2rem;
+  }
+}
 .front-page .mainVisual__copy {
   position: absolute;
   bottom: 70px;
@@ -3730,6 +3770,11 @@ a {
 .front-page .mainVisual__copy .copy {
   position: relative;
   margin-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .front-page .mainVisual__copy .copy {
+    margin-top: 8px;
+  }
 }
 .front-page .mainVisual__copy .copy:first-child {
   margin-top: 0;
@@ -3753,7 +3798,6 @@ a {
 @media screen and (max-width: 768px) {
   .front-page .mainVisual__copy .txt {
     font-size: 2.3rem;
-    margin-top: 8px;
     padding: 0 12px;
   }
 }

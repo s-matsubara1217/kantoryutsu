@@ -4,54 +4,54 @@
 
 // HEADER
 .header {
-  position: absolute;
-  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 49;
+  background-color: rgba(#fff, 0.95);
+  transition: opacity 0.5s;
+
   &__wrap {
-    padding: 64px 72px;
+    width: 100%;
+    max-width: 1280px;
+    padding: 24px 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @include mq-down(md) {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      padding: 20px 24px;
     }
 
     .logo-holder {
-      width: 9.75%;
-      max-width: 117px;
-      @include mq-down(md) {
-        width: 79.5px;
-      }
-
-      a {
-        @include mq-up(md) {
-          transition: opacity 0.5s;
-          &:hover {
-            opacity: 0.8;
-          }
+      .logo {
+        width: 204px;
+        @include mq-down(md) {
+          width: 102px;
         }
       }
-      .logo {
-      }
     }
-    .txt-recruit {
-      width: 100%;
-      height: 32px;
-      background-color: $third-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 16px;
-      border-radius: 2px;
+    .nav {
       @include mq-down(md) {
-        height: 28px;
+        display: none;
       }
+      &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-      span {
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: white;
-        @include mq-down(md) {
-          font-size: 1.2rem;
+        &__item {
+          margin-right: 32px;
+          @include mq-down(xl) {
+            margin-right: 24px;
+            font-size: 1.4rem;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
         }
       }
     }
@@ -59,19 +59,10 @@
 }
 .front-page {
   .header {
-    max-width: 1440px + 80px;
-    padding: 0 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    @include mq-down(md) {
-      padding: 0;
-    }
+    opacity: 0;
 
-    &__wrap {
-      padding: 64px 32px;
-      @include mq-down(md) {
-        padding: 32px 24px;
-      }
+    &.visible {
+      opacity: 1;
     }
   }
 }
