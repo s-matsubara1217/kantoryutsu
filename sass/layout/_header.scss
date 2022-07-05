@@ -121,7 +121,7 @@
       width: 28px;
       height: 2px;
       background: #000;
-      transition: all 400ms $bezier-easeOutCubic;
+      transition: transform 400ms $bezier-easeOutCubic;
 
       &:last-child {
         margin-top: 3px;

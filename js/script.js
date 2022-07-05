@@ -200,3 +200,10 @@ function spanWrap(targetElm) {
   });
 }
 spanWrap('.split');
+
+
+/*-------------------------------
+  animation
+-------------------------------*/
+// class="anime -slideIn-r-80p" をもつ親セレクタに class="hidden" を追加
+$("div:has(> .-slideIn-r-80p)").addClass("hidden");

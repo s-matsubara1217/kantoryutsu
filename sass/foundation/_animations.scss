@@ -10,7 +10,7 @@
     opacity: 0;
     &.js-active {
       @include animation(
-        fadein-opacity 600ms $bezier-easeOutSine 100ms
+        fadein-opacity 2000ms $bezier-easeOutSine
       );
     }
   }
@@ -52,6 +52,16 @@
       @include animation(
         scale-0-1 500ms $bezier-easeOutSine 100ms
       );
+    }
+  }
+  &.-slideIn-r-80p {
+    opacity: 0.2;
+    transform: translateX(80%);
+    transition: all .9s ease 0s,opacity 1.2s ease 0s;
+    overflow: hidden;
+    &.js-active {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
@@ -298,7 +308,6 @@
 }
 
 // 固有アニメーション
-
 @include keyframes(waveY-20) {
   0% {
     transform: translateY(0);
@@ -332,5 +341,67 @@
   }
   100% {
       transform: scale(1.05);
+  }
+}
+
+// FVanimation
+.mainVisual {
+  .nav {
+    &__list {
+      &__item {
+        transform: translateX(25%);
+        opacity: 0;
+        transition: all .6s ease 0s,opacity 0.6s ease 0s;
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i}) {
+            transition-delay: calc(0.8s + (0.1s * $i));
+          }
+        }
+      }
+    }
+  }
+  &__copy {
+    z-index: 2;
+    .copy {
+      overflow: hidden;
+      .txt {
+        opacity: 0;
+        display: inline-block;
+        transform: translateY(100%);
+        transition: transform 0.5s, opacity 0.5s;
+        transition-delay: 0.6s;
+      }
+
+
+      &:before {
+        transform: translateX(-80%);
+        transition: all .6s ease 0s
+      }
+    }
+  }
+}
+.page-loaded {
+  .mainVisual {
+    .nav {
+      &__list {
+        &__item {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+    &__copy {
+      .copy {
+
+        .txt {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transform: translateX(0);
+        }
+
+      }
+    }
   }
 }

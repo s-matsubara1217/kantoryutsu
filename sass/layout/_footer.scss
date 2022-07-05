@@ -14,7 +14,7 @@
   &__recruit {
     .recruit {
       &__head {
-        max-width: 1280px;
+        // max-width: 1280px;
         padding: 0 40px;
         transform: translateY(100%);
         margin: 0 auto;
@@ -49,10 +49,9 @@
           align-items: center;
 
           .wrap {
-            max-width: 500px;
+            width: 70%;
+            margin: 0 auto;
             @include mq-down(xl) {
-              max-width: 440px;
-              width: 80%;
               margin: 32px auto;
             }
           }
@@ -82,8 +81,10 @@
   &__body {
     padding-top: 90px;
     padding-bottom: 24px;
+    background-color: #f4f5f6;
     @include mq-down(md) {
       padding-top: 48px;
+      padding-bottom: 56px;
     }
 
     &__top {
@@ -99,7 +100,8 @@
       .img {
         width: 296px;
         @include mq-down(md) {
-          width: 230px;
+          width: 222px;
+          margin: 0 auto;
         }
       }
     }
@@ -109,8 +111,8 @@
       justify-content: flex-start;
       align-items: flex-start;
       @include mq-down(md) {
-        flex-direction: column-reverse;
-        margin-top: 28px;
+        margin-top: 50px;
+        display: block;
       }
     }
 
@@ -119,7 +121,7 @@
       border-right: 1px solid #d9dde2;
       @include mq-down(md) {
         border: none;
-        margin-top: 40px;
+        margin-top: 0;
       }
 
       .ttl {
@@ -127,19 +129,24 @@
         line-height: 1.4;
         @include mq-down(md) {
           font-size: 1.8rem;
+          text-align: center;
         }
 
         .small {
           font-size: 1.5rem;
           @include mq-down(md) {
             font-size: 1.4rem;
+            display: block;
+            margin-top: 6px;
           }
         }
       }
       .tel-num {
         margin-top: 40px;
         @include mq-down(md) {
-          margin-top: 4px;
+          margin-top: 20px;
+          text-align: center;
+          line-height: 1;
         }
 
         .txt-tel {
@@ -164,8 +171,9 @@
         height: 62px;
         position: relative;
         @include mq-down(md) {
-          width: 240px;
-          height: 56px;
+          width: 220px;
+          height: 51px;
+          margin: 32px auto 0;
         }
 
         &::before {
@@ -178,11 +186,19 @@
           bottom: -32px;
           left: 50%;
           transform: translateX(-50%);
+          @include mq-down(md) {
+            content: none;
+          }
         }
       }
       .address {
         margin-top: 54px;
         font-weight: 400;
+        @include mq-down(md) {
+          margin-top: 24px;
+          font-size: 1.3rem;
+          text-align: center;
+        }
       }
     }
     &__nav {
@@ -223,8 +239,22 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    @include mq-down(md) {
+      display: block;
+      margin-top: 32px;
+      text-align: center;
+    }
+
     &__item {
       margin-right: 3.3%;
+      @include mq-down(md) {
+        margin-right: 0;
+        margin-top: 4px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -235,4 +265,3 @@
   }
 
 }
-

@@ -225,13 +225,16 @@ a {
 /* 表示 / 非表示 */
 .u-pcOnly {
   @include mq-down(md) {
-    display: none;
+    display: none !important;
   }
 }
 .u-spOnly {
   @include mq-up(md) {
-    display: none;
+    display: none !important;
   }
+}
+.hidden {
+  overflow: hidden;
 }
 
 /* クッキーアイコン */

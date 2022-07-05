@@ -43,7 +43,7 @@
     &__copy {
       position: absolute;
       bottom: 70px;
-      left: 32px;
+      left: 56px;
       display: inline-flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -53,23 +53,37 @@
         left: 12px;
       }
 
+      .copy {
+        position: relative;
+        margin-top: 16px;
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+      }
+
       .txt {
         font-size: 3rem;
-        background-color: #fff;
         padding-right: 20px;
         letter-spacing: 0.15em;
-        margin-top: 16px;
         @include mq-down(md) {
           font-size: 2.3rem;
           margin-top: 8px;
           padding: 0 12px;
         }
-
-        &:first-child {
-          margin-top: 0;
-        }
       }
-      
+
     }
     &__hero {
       flex: 0 0 60%;
@@ -151,8 +165,10 @@
         }
         .body {
           margin-top: 40px;
+          margin-left: -100px;
           @include mq-down(md) {
             margin-top: 24px;
+            margin-left: 0;
           }
         }
       }
@@ -441,7 +457,7 @@
 
     .interview {
       &__head {
-        
+
       }
       &__body {
         margin-top: 80px;
