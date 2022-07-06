@@ -1,0 +1,82 @@
+// Foundation
+@use '../foundation/variables' as *;
+@use '../foundation/mixins' as *;
+
+
+// 共通
+.lower-kyujin_l,
+.lower-kyujin_d,
+.lower-whatsnew {
+  .kyujin_container {
+    margin-top: 100px;
+    max-width: 1200px;
+  }
+  .btn {
+    border-radius: 4px;
+
+    &.btn_external {
+      &:after {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+      }
+    }
+  }
+}
+
+// 一覧
+.lower-kyujin_l {
+  
+}
+
+// 詳細
+.lower-kyujin_d {
+  .kyujin_container {
+    margin-top: 172px;
+  }
+  .outline_ttl {
+    padding: 0;
+    margin: 36px 0;
+    text-align: center;
+    letter-spacing: 0.125em;
+
+    .eng {
+      color: #a1abb6;
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+    .ja {
+      font-size: 2.8rem;
+      line-height: 1;
+      display: block;
+      color: $primary-color;
+      margin-top: 8px;
+    }
+    &:after {
+      content: none;
+    }
+  }
+  .job_outline_item_ttl {
+    color: $primary-color;
+  }
+  .job_body_block {
+    margin: 84px 0;
+  }
+  .fixed_convertion {
+    .convertion {
+      .btn_convertion {
+        border-radius: 4px;
+        &:after {
+          top: 50%;
+          transform: translateY(-50%);
+          right: 20px;
+        }
+      }
+    }
+  }
+}
+
+// 新着求人
+.lower-whatsnew {
+
+}

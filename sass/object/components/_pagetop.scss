@@ -51,8 +51,6 @@
 }
 .lower-kyujin_d {
   .pageTop {
-    @include mq-down(md) {
-      bottom: 72px;
-    }
+    bottom: 100px;
   }
 }

@@ -6,7 +6,7 @@
 // FOOTER
 // ==========================================*/
 .footer {
-  margin-top: 150px;
+  margin-top: 120px;
   @include mq-down(md) {
     margin-top: 88px;
   }
@@ -275,4 +275,17 @@
     }
   }
 
+}
+.front-page {
+  .footer {
+    margin-top: 150px;
+    @include mq-down(md) {
+      margin-top: 88px;
+    }
+  }
+}
+.lower-kyujin_d {
+  .footer {
+    padding-bottom: 94px;
+  }
 }

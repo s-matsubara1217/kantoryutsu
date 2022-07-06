@@ -1,0 +1,11 @@
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixins' as *;
+
+.pageHeader {
+  background-color: #f4f5f6;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

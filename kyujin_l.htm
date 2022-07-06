@@ -50,16 +50,13 @@
 
 	<!-- CSS -->
 	<!-- 固有 -->
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<!-- 固有 -->
+	<link rel="stylesheet" href="css/kyujin.css">
+	<link rel="stylesheet" href="css/kyujin_add.css">
+	<!-- /固有 -->
 	<!-- 共通 -->
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/add.css">
 	<!-- 共通 -->
-	<!-- 固有 -->
-	<link rel="stylesheet" href="css/kyujin.css">
-	<link rel="stylesheet" href="css/kyujin_add.css">
-	<!-- /固有 -->
 	<!-- /CSS -->
 </head>
 
@@ -141,9 +138,14 @@
 
 
 	<main class="l-main">
+		<!-- ページヘッダー -->
+		<div class="pageHeader">
+			<span class="txt">ページヘッダー</span>
+		</div>
+
 		<div class="kyujin_container">
 			<!-- search panel -->
-			<div class="search_panel">
+			<div class="search_panel anime -fadeIn">
 				<div class="toggle search-toggle">
 					<p class="toggle_txt">条件を指定する</p>
 					<span class="toggle_trigger">
@@ -156,9 +158,8 @@
 						<div class="custom-form_inner">
 							<!-- 勤務地(cross search) -->
 							<div class="custom-form_parts">
-								<p class="parts_ttl">勤務地を選ぶ</p>
+								<p class="parts_ttl">勤務地</p>
 								<div class="form_parts_inner">
-									<p class="form_parts_inner_ttl">1.都道府県を選択</p>
 									<div class="pull-down">
 										<select>
 											<option value="" selected="selected">都道府県を選択</option>
@@ -167,7 +168,6 @@
 											<option value="" id="">項目名項目名</option>
 										</select>
 									</div>
-									<p class="form_parts_inner_ttl">2.市区町村を選択<span>※複数可</span></p>
 									<div class="check-box selCity-box">
 										<span class="selCity_alert">上の都道府県を選択してください</span>
 										<ul class="category_list">
@@ -206,155 +206,89 @@
 								</div>
 							</div>
 							<!-- //勤務地(cross search) -->
-							<!-- 勤務地(pull down) -->
-							<div class="custom-form_parts">
-								<p class="parts_ttl">勤務地を選ぶ</p>
-								<div class="form_parts_inner">
-									<div class="pull-down">
-										<select>
-											<option value="" selected="selected">勤務地</option>
-											<option value="" id="">項目名項目名</option>
-											<option value="" id="">項目名項目名</option>
-											<option value="" id="">項目名項目名</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<!-- //勤務地(pull down) -->
 							<!-- 職種 -->
 							<div class="custom-form_parts">
-								<p class="parts_ttl">職種を選ぶ</p>
+								<p class="parts_ttl">職種</p>
 								<div class="form_parts_inner">
-									<div class="pull-down">
-										<select>
-											<option value="" selected="selected">職種</option>
-											<option value="" id="">項目名項目名</option>
-											<option value="" id="">項目名項目名</option>
-											<option value="" id="">項目名項目名</option>
-										</select>
-									</div>
+									<ul class="category_list">
+										<li>
+											<input type="checkbox" id="occupation01" name="" />
+											<label for="occupation01">
+												<a href="">職種1</a>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="occupation02" name="" />
+											<label for="occupation02">
+												<a href="">職種2</a>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="occupation03" name="" />
+											<label for="occupation03">
+												<a href="">職種3</a>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="occupation04" name="" />
+											<label for="occupation04">
+												<a href="">職種4</a>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="occupation05" name="" />
+											<label for="occupation05">
+												<a href="">職種5</a>
+											</label>
+										</li>
+									</ul>
 								</div>
 							</div>
 							<!-- 職種 -->
 							<!-- 雇用形態 -->
 							<div class="custom-form_parts">
-								<p class="parts_ttl">雇用形態を選ぶ</p>
+								<p class="parts_ttl">雇用形態</p>
 								<div class="form_parts_inner">
-									<div class="pull-down">
-										<select>
-											<option value="" selected="selected">雇用形態</option>
-											<option value="" id="">項目名項目名</option>
-											<option value="" id="">項目名項目名</option>
-											<option value="" id="">項目名項目名</option>
-										</select>
-									</div>
+									<ul class="category_list">
+										<li>
+											<input type="checkbox" id="status01" name="" />
+											<label for="status01">
+												<a href="">正社員</a>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="status02" name="" />
+											<label for="status02">
+												<a href="">契約社員</a>
+											</label>
+										</li>
+										<li>
+											<input type="checkbox" id="status03" name="" />
+											<label for="status03">
+												<a href="">パート・アルバイト</a>
+											</label>
+										</li>
+									</ul>
 								</div>
 							</div>
 							<!-- //雇用形態 -->
-							<!-- 特徴 -->
-							<div class="custom-form_parts">
-									<p class="parts_ttl">チェックボックスでの表示</p>
-									<div class="form_parts_inner">
-											<ul class="category_list">
-													<li>
-															<input type="checkbox" id="a2" name="" />
-															<label for="a2">
-																<a href="">項目項目項目項目</a>
-															</label>
-													</li>
-													<li>
-															<input type="checkbox" id="b2" name="" />
-															<label for="b2">
-																<a href="">項目項目項目項目</a>
-															</label>
-													</li>
-													<li>
-															<input type="checkbox" id="c2" name="" />
-															<label for="c2">
-																<a href="">項目項目項目項目</a>
-															</label>
-													</li>
-													<li>
-															<input type="checkbox" id="d2" name="" />
-															<label for="d2">
-																<a href="">項目項目項目項目</a>
-															</label>
-													</li>
-													<li>
-															<input type="checkbox" id="e2" name="" />
-															<label for="e2">
-																<a href="">項目項目項目項目</a>
-															</label>
-													</li>
-													<li>
-															<input type="checkbox" id="f2" name="" />
-															<label for="f2">
-																<a href="">項目項目項目項目</a>
-															</label>
-													</li>
-													<li>
-															<input type="checkbox" id="g2" name="" />
-															<label for="g2">
-																<a href="">項目項目項目項目</a>
-															</label>
-													</li>
-											</ul>
-									</div>
-							</div>
-							<!-- //特徴 -->
-
-							<!-- ラジオボタンサンプル -->
-							<!-- 必要な時に活用ください。
-                            <div class="custom-form_parts">
-                                <p class="parts_ttl">ラジオボタンサンプル</p>
-                                <div class="form_parts_inner">
-                                    <ul class="category_list">
-                                        <li>
-                                            <input type="radio" id="ra1" name="workstyle" />
-                                            <label for="ra1">
-                                                <a href="">項目名項目名</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" id="ra2" name="workstyle" />
-                                            <label for="ra2">
-                                                <a href="">項目名項目名</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input class="resetbtn" type="button" value="リセット">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            -->
-							<!-- //ラジオボタンサンプル -->
-
 							<!-- キーワード -->
 							<div class="custom-form_parts">
 								<p class="parts_ttl">フリーワード</p>
 								<div class="form_parts_inner">
 									<input class="searchWord" type="search" name="" placeholder="勤務地、職種など" title="勤務地、職種など" onfocus="" onblur="">
 								</div>
+								<div class="custom-form_searth_btn">
+									<span class="btn_cover">
+										<input type="submit" value="条件で検索">
+									</span>
+								</div>
 							</div>
 							<!-- //キーワード -->
-						</div>
-						<div class="custom-form_searth_btn">
-							<span class="btn_cover">
-								<input type="submit" value="条件で検索">
-							</span>
 						</div>
 					</form>
 				</div>
 				<div class="job_result_total">
-					<!-- 21.03.11 削除 -->
-					<!--
-					<div class="job_result_total_head">
-						<span class="job_result_total_num">999</span>
-						<span class="job_result_total_cach">件</span>
-					</div>
-					-->
-					<!-- /21.03.11 削除 -->
 					<div class="job_result_total_body">
 						<!-- デフォルトは　「求人情報一覧」 -->
 						<p class="job_result_total_body_ttl">大阪 | 職種1・職種2・職種3 | 正社員 | 特徴1・特徴2・特徴3・特徴4 | キーワードキーワード の求人検索結果</p>
@@ -363,7 +297,7 @@
 			</div>
 			<!-- //search panel -->
 
-			<div class="job_count_pager contents_top">
+			<div class="job_count_pager contents_top anime -fadeIn">
 				<div class="result_total">
 					<span class="result_total_all">999</span>
 					<span class="result_total_txt">件</span>
@@ -386,7 +320,7 @@
 
 			<div class="job_list">
 				<!-- 1block -->
-				<article class="job data-for-aidemlog" data-id="${anken.job_offer_id}">
+				<article class="job data-for-aidemlog anime -fadeIn" data-id="${anken.job_offer_id}">
 					<header class="job_head">
 
 						<div class="job_head_meta">
@@ -467,7 +401,7 @@
 				</article>
 				<!-- //1block -->
 
-				<article class="job data-for-aidemlog" data-id="${anken.job_offer_id}">
+				<article class="job data-for-aidemlog anime -fadeIn" data-id="${anken.job_offer_id}">
 					<header class="job_head">
 						<div class="job_head_meta">
 							<div class="job_head_meta_inner">
@@ -544,7 +478,7 @@
 
 			</div>
 
-			<div class="job_count_pager contents_bottom">
+			<div class="job_count_pager contents_bottom anime -fadeIn">
 				<div class="pager_next">
 					<a href="" class="btn">次の10件を表示</a>
 				</div>
