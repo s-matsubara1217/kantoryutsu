@@ -16,6 +16,11 @@
 .lower-whatsnew .btn {
   border-radius: 4px;
 }
+.lower-kyujin_l .btn.btn_secondary,
+.lower-kyujin_d .btn.btn_secondary,
+.lower-whatsnew .btn.btn_secondary {
+  background-color: #46679d;
+}
 .lower-kyujin_l .btn.btn_external:after,
 .lower-kyujin_d .btn.btn_external:after,
 .lower-whatsnew .btn.btn_external:after {

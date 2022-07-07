@@ -18,6 +18,9 @@
   .btn {
     border-radius: 4px;
 
+    &.btn_secondary {
+      background-color: #46679d;
+    }
     &.btn_external {
       &:after {
         top: 50%;
