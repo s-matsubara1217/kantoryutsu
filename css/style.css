@@ -2760,6 +2760,12 @@ input[type=checkbox] + label:after {
     margin: 32px auto;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer__recruit .recruit__body .txt-holder .wrap {
+    width: 100%;
+    padding: 0 24px;
+  }
+}
 @media all and (-ms-high-contrast: none) {
   .footer__recruit .recruit__body .txt-holder .wrap {
     margin: 0;
@@ -3045,7 +3051,6 @@ input[type=checkbox] + label:after {
   }
 }
 .front-page .mainVisual {
-  max-width: 1520px;
   padding: 0 40px;
   margin: 0 auto;
 }
@@ -3069,6 +3074,7 @@ input[type=checkbox] + label:after {
   position: absolute;
   top: 60px;
   left: 56px;
+  z-index: 50;
 }
 @media screen and (max-width: 1200px) {
   .front-page .mainVisual__logo {

@@ -23,7 +23,6 @@
 
   // メインビジュアル
   .mainVisual {
-    max-width: 1440px + 80px;
     padding: 0 40px;
     margin: 0 auto;
     @include mq-down(md) {
@@ -44,6 +43,7 @@
       position: absolute;
       top: 60px;
       left: 56px;
+      z-index: 50;
       @include mq-down(xl) {
         left: 16px;
       }

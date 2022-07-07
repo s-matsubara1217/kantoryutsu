@@ -55,6 +55,10 @@
             @include mq-down(xl) {
               margin: 32px auto;
             }
+            @include mq-down(md) {
+              width: 100%;
+              padding: 0 24px;
+            }
             @media all and (-ms-high-contrast: none) {
               margin: 0;
             }
