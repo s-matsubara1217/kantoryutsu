@@ -8,4 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq-down(md) {
+    height: 180px;
+  }
 }

@@ -10,6 +10,10 @@
   .kyujin_container {
     margin-top: 100px;
     max-width: 1200px;
+
+    @include mq-down(md) {
+      margin-top: 64px;
+    }
   }
   .btn {
     border-radius: 4px;
@@ -26,24 +30,33 @@
 
 // 一覧
 .lower-kyujin_l {
-  
+
 }
 
 // 詳細
 .lower-kyujin_d {
   .kyujin_container {
     margin-top: 172px;
+    @include mq-down(md) {
+      margin-top: 90px;
+    }
   }
   .outline_ttl {
     padding: 0;
     margin: 36px 0;
     text-align: center;
     letter-spacing: 0.125em;
+    @include mq-down(md) {
+      margin: 20px 0;
+    }
 
     .eng {
       color: #a1abb6;
       font-size: 1.6rem;
       line-height: 1;
+      @include mq-down(md) {
+        font-size: 1.5rem;
+      }
     }
     .ja {
       font-size: 2.8rem;
@@ -51,6 +64,10 @@
       display: block;
       color: $primary-color;
       margin-top: 8px;
+      @include mq-down(md) {
+        font-size: 2.4rem;
+        margin-top: 5px;
+      }
     }
     &:after {
       content: none;
@@ -61,6 +78,9 @@
   }
   .job_body_block {
     margin: 84px 0;
+    @include mq-down(md) {
+      margin: 42px 0;
+    }
   }
   .fixed_convertion {
     .convertion {
@@ -74,9 +94,24 @@
       }
     }
   }
+  .page_back {
+    @include mq-down(md) {
+      padding: 10px 0;
+    }
+  }
+  #ot-sdk-btn-floating.ot-floating-button {
+    bottom: 100px;
+    @include mq-down(md) {
+      bottom: 75px;
+    }
+  }
 }
 
 // 新着求人
 .lower-whatsnew {
-
+  .kyujin_container {
+    @include mq-down(md) {
+      margin-top: 48px;
+    }
+  }
 }

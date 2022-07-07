@@ -5,4 +5,7 @@
 // LOWER-MAIN-MV
 .l-main {
   margin-top: 128px;
+  @include mq-down(md) {
+    margin-top: 80px;
+  }
 }

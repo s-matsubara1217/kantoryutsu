@@ -10,6 +10,7 @@
   z-index: 49;
   opacity: 0;
   transition: opacity 0.4s;
+
   .link {
     display: flex;
     flex-direction: column;
@@ -52,5 +53,8 @@
 .lower-kyujin_d {
   .pageTop {
     bottom: 100px;
+    @include mq-down(md) {
+      bottom: 72px;
+    }
   }
 }
