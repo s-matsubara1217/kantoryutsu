@@ -6,11 +6,6 @@
 // FOOTER
 // ==========================================*/
 .footer {
-  margin-top: 120px;
-  @include mq-down(md) {
-    margin-top: 40px;
-  }
-
   &__recruit {
     .recruit {
       &__head {
@@ -21,7 +16,8 @@
         position: relative;
         z-index: 5;
         @include mq-down(md) {
-          margin-bottom: -20px;
+          margin-bottom: -34px;
+          transform: translateY(50%);
         }
       }
       &__body {

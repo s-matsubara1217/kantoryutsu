@@ -1,3 +1,15 @@
+.lower-kyujin_l .l-main,
+.lower-kyujin_d .l-main,
+.lower-whatsnew .l-main {
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .lower-kyujin_l .l-main,
+.lower-kyujin_d .l-main,
+.lower-whatsnew .l-main {
+    margin-bottom: 40px;
+  }
+}
 .lower-kyujin_l .kyujin_container,
 .lower-kyujin_d .kyujin_container,
 .lower-whatsnew .kyujin_container {
