@@ -269,6 +269,25 @@
       &:last-child {
         margin-right: 0;
       }
+      .link {
+        &.-external {
+          position: relative;
+          &:after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 7px;
+            background-image: url(../img/common/ico_custom_blank_black.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 6px;
+            margin-bottom: 1px;
+            @include mq-down(md) {
+              margin-left: 4px;
+            }
+          }
+        }
+      }
       .txt {
         font-size: 1.2rem;
       }

@@ -3005,6 +3005,25 @@ input[type=checkbox] + label:after {
 .footer__gaList__item:last-child {
   margin-right: 0;
 }
+.footer__gaList__item .link.-external {
+  position: relative;
+}
+.footer__gaList__item .link.-external:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 7px;
+  background-image: url(../img/common/ico_custom_blank_black.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 6px;
+  margin-bottom: 1px;
+}
+@media screen and (max-width: 768px) {
+  .footer__gaList__item .link.-external:after {
+    margin-left: 4px;
+  }
+}
 .footer__gaList__item .txt {
   font-size: 1.2rem;
 }
